@@ -43,7 +43,7 @@ button_plus = Button(root, text="+", width=10, pady=20,
                      command=lambda: button_func())
 button_minus = Button(root, text="-", width=10, pady=20,
                       command=lambda: button_func())
-button_multiply = Button(root, text="*", width=10,
+button_multiply = Button(root, text="X", width=10,
                          pady=20, command=lambda: button_func())
 button_divide = Button(root, text="/", width=10, pady=20,
                        command=lambda: button_func())
