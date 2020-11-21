@@ -14,33 +14,35 @@ def button_func():
 
 
 # Creating buttons
-button_1 = Button(root, text="1", padx=10, pady=20, command=button_func)
-button_2 = Button(root, text="2", padx=10, pady=20, command=button_func)
-button_3 = Button(root, text="3", padx=10, pady=20, command=button_func)
-button_4 = Button(root, text="4", padx=10, pady=20, command=button_func)
-button_5 = Button(root, text="5", padx=10, pady=20, command=button_func)
-button_6 = Button(root, text="6", padx=10, pady=20, command=button_func)
-button_7 = Button(root, text="7", padx=10, pady=20, command=button_func)
-button_8 = Button(root, text="8", padx=10, pady=20, command=button_func)
-button_9 = Button(root, text="9", padx=10, pady=20, command=button_func)
-button_0 = Button(root, text="0", padx=10, pady=20, command=button_func)
-button_plus = Button(root, text="+", padx=10, pady=20, command=button_func)
-button_minus = Button(root, text="-", padx=10, pady=20, command=button_func)
-button_multiply = Button(root, text="*", padx=10, pady=20, command=button_func)
-button_divide = Button(root, text="/", padx=10, pady=20, command=button_func)
-button_equal = Button(root, text="=", padx=10, pady=20, command=button_func)
-button_comma = Button(root, text=".", padx=10, pady=20, command=button_func)
-button_changesign = Button(root, text="+/-", padx=10,
+button_1 = Button(root, text="1", width=10, pady=20, command=button_func)
+button_2 = Button(root, text="2", width=10, pady=20, command=button_func)
+button_3 = Button(root, text="3", width=10, pady=20, command=button_func)
+button_4 = Button(root, text="4", width=10, pady=20, command=button_func)
+button_5 = Button(root, text="5", width=10, pady=20, command=button_func)
+button_6 = Button(root, text="6", width=10, pady=20, command=button_func)
+button_7 = Button(root, text="7", width=10, pady=20, command=button_func)
+button_8 = Button(root, text="8", width=10, pady=20, command=button_func)
+button_9 = Button(root, text="9", width=10, pady=20, command=button_func)
+button_0 = Button(root, text="0", width=10, pady=20, command=button_func)
+button_plus = Button(root, text="+", width=10, pady=20, command=button_func)
+button_minus = Button(root, text="-", width=10, pady=20, command=button_func)
+button_multiply = Button(root, text="*", width=10,
+                         pady=20, command=button_func)
+button_divide = Button(root, text="/", width=10, pady=20, command=button_func)
+button_equal = Button(root, text="=", width=10, pady=52, command=button_func)
+button_comma = Button(root, text=".", width=10, pady=20, command=button_func)
+button_changesign = Button(root, text="+/-", width=10,
                            pady=20, command=button_func)
-button_clear = Button(root, text="C", padx=10, pady=20, command=button_func)
+button_clear = Button(root, text="C", width=10, pady=20, command=button_func)
 
-
+# Displaying buttons
 button_0.grid(row=5, column=1)
 button_comma.grid(row=5, column=2)
 
 button_1.grid(row=4, column=0)
 button_2.grid(row=4, column=1)
 button_3.grid(row=4, column=2)
+button_equal.grid(row=4, column=3, rowspan=2)
 
 button_4.grid(row=3, column=0)
 button_5.grid(row=3, column=1)
