@@ -1,9 +1,7 @@
 from tkinter import *
-from math import *
 
 root = Tk()
 root.title("My calculator")
-
 entry = Entry(root, width=35, borderwidth=5)
 entry.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
 
@@ -16,6 +14,23 @@ def button_func(number):
 
 def button_clear():
     entry.delete(0, END)
+
+
+def button_add():
+    first = entry.get()
+    global f_num
+    if first == "" :
+        first=0
+    f_num = int(first)
+    entry.delete(0, END)
+
+
+def button_equal():
+    second = entry.get()
+    if second == "" :
+        second=0
+    entry.delete(0, END)
+    entry.insert(0, f_num + int(second))
 
 
 # Creating buttons
@@ -40,7 +55,7 @@ button_9 = Button(root, text="9", width=10, pady=20,
 button_0 = Button(root, text="0", width=10, pady=20,
                   command=lambda: button_func("0"))
 button_plus = Button(root, text="+", width=10, pady=20,
-                     command=lambda: button_func())
+                     command=button_add)
 button_minus = Button(root, text="-", width=10, pady=20,
                       command=lambda: button_func())
 button_multiply = Button(root, text="X", width=10,
@@ -48,7 +63,7 @@ button_multiply = Button(root, text="X", width=10,
 button_divide = Button(root, text="/", width=10, pady=20,
                        command=lambda: button_func())
 button_equal = Button(root, text="=", width=10, pady=52,
-                      command=lambda: button_func())
+                      command=button_equal)
 button_comma = Button(root, text=".", width=10, pady=20,
                       command=lambda: button_func())
 button_changesign = Button(root, text="+/-", width=10,
