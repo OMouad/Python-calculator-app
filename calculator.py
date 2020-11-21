@@ -13,6 +13,7 @@ def button_func():
     return
 
 
+# Creating buttons
 button_1 = Button(root, text="1", padx=10, pady=20, command=button_func)
 button_2 = Button(root, text="2", padx=10, pady=20, command=button_func)
 button_3 = Button(root, text="3", padx=10, pady=20, command=button_func)
@@ -23,5 +24,17 @@ button_7 = Button(root, text="7", padx=10, pady=20, command=button_func)
 button_8 = Button(root, text="8", padx=10, pady=20, command=button_func)
 button_9 = Button(root, text="9", padx=10, pady=20, command=button_func)
 button_0 = Button(root, text="0", padx=10, pady=20, command=button_func)
+button_plus = Button(root, text="+", padx=10, pady=20, command=button_func)
+button_minus = Button(root, text="-", padx=10, pady=20, command=button_func)
+button_multiply = Button(root, text="*", padx=10, pady=20, command=button_func)
+button_divide = Button(root, text="/", padx=10, pady=20, command=button_func)
+button_equal = Button(root, text="=", padx=10, pady=20, command=button_func)
+button_comma = Button(root, text=".", padx=10, pady=20, command=button_func)
+button_changesign = Button(root, text="+/-", padx=10,
+                           pady=20, command=button_func)
+
+
+
+
 
 root.mainloop()
