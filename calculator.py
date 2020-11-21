@@ -2,7 +2,7 @@ from tkinter import *
 
 root = Tk()
 root.title("My calculator")
-entry = Entry(root, width=36)
+entry = Entry(root, width=40, relief="flat",)
 entry.grid(row=0, column=0, columnspan=4, padx=20, pady=20, ipadx=4, ipady=4)
 
 key = ""
@@ -80,41 +80,41 @@ def button_equal():
 
 
 # Creating buttons
-button_1 = Button(root, text="1", width=10, pady=20,
+button_1 = Button(root, text="1", width=10, pady=20, relief="flat",
                   command=lambda: button_func("1"))
-button_2 = Button(root, text="2", width=10, pady=20,
+button_2 = Button(root, text="2", width=10, pady=20, relief="flat",
                   command=lambda: button_func("2"))
-button_3 = Button(root, text="3", width=10, pady=20,
+button_3 = Button(root, text="3", width=10, pady=20, relief="flat",
                   command=lambda: button_func("3"))
-button_4 = Button(root, text="4", width=10, pady=20,
+button_4 = Button(root, text="4", width=10, pady=20, relief="flat",
                   command=lambda: button_func("4"))
-button_5 = Button(root, text="5", width=10, pady=20,
+button_5 = Button(root, text="5", width=10, pady=20, relief="flat",
                   command=lambda: button_func("5"))
-button_6 = Button(root, text="6", width=10, pady=20,
+button_6 = Button(root, text="6", width=10, pady=20, relief="flat",
                   command=lambda: button_func("6"))
-button_7 = Button(root, text="7", width=10, pady=20,
+button_7 = Button(root, text="7", width=10, pady=20, relief="flat",
                   command=lambda: button_func("7"))
-button_8 = Button(root, text="8", width=10, pady=20,
+button_8 = Button(root, text="8", width=10, pady=20, relief="flat",
                   command=lambda: button_func("8"))
-button_9 = Button(root, text="9", width=10, pady=20,
+button_9 = Button(root, text="9", width=10, pady=20, relief="flat",
                   command=lambda: button_func("9"))
-button_0 = Button(root, text="0", width=10, pady=20,
+button_0 = Button(root, text="0", width=10, pady=20, relief="flat",
                   command=lambda: button_func("0"))
-button_plus = Button(root, text="+", width=10, pady=20,
+button_plus = Button(root, text="+", width=10, pady=20, relief="flat",
                      command=button_add)
-button_minus = Button(root, text="-", width=10, pady=20,
+button_minus = Button(root, text="-", width=10, pady=20, relief="flat",
                       command=button_minus)
-button_multiply = Button(root, text="X", width=10,
+button_multiply = Button(root, text="X", width=10, relief="flat",
                          pady=20, command=button_multiply)
-button_divide = Button(root, text="/", width=10, pady=20,
+button_divide = Button(root, text="/", width=10, pady=20, relief="flat",
                        command=button_divide)
-button_equal = Button(root, text="=", width=10, pady=52,
+button_equal = Button(root, text="=", width=10, pady=52, relief="flat",
                       command=button_equal)
-button_comma = Button(root, text=".", width=10, pady=20,
+button_comma = Button(root, text=".", width=10, pady=20, relief="flat",
                       command=button_comma)
 button_changesign = Button(root, text="+/-", width=10,
-                           pady=20, command=button_changesign)
-button_clear = Button(root, text="C", width=10, pady=20,
+                           pady=20, relief="flat", command=button_changesign)
+button_clear = Button(root, text="C", width=10, pady=20, relief="flat",
                       command=button_clear)
 
 # Displaying buttons
