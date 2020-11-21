@@ -2,8 +2,21 @@ from tkinter import *
 
 root = Tk()
 root.title("My calculator")
-entry = Entry(root, width=35, borderwidth=5)
-entry.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
+entry = Entry(root, width=36)
+entry.grid(row=0, column=0, columnspan=4, padx=20, pady=20, ipadx=4, ipady=4)
+
+key = ""
+
+
+def button_comma():
+    current = entry.get()
+    entry.delete(0, END)
+    entry.insert(0, current+".")
+
+
+def button_changesign():
+    button_first()
+    entry.insert(0, f_num * -1)
 
 
 def button_func(number):
@@ -14,23 +27,56 @@ def button_func(number):
 
 def button_clear():
     entry.delete(0, END)
+    global f_num
+    f_num = 0
 
 
 def button_add():
+    button_first()
+    global key
+    key = "add"
+
+
+def button_minus():
+    button_first()
+    global key
+    key = "minus"
+
+
+def button_multiply():
+    button_first()
+    global key
+    key = "multiply"
+
+
+def button_divide():
+    button_first()
+    global key
+    key = "divide"
+
+
+def button_first():
     first = entry.get()
     global f_num
-    if first == "" :
-        first=0
-    f_num = int(first)
+    if first == "":
+        first = 0
+    f_num = float(first)
     entry.delete(0, END)
 
 
 def button_equal():
     second = entry.get()
-    if second == "" :
-        second=0
+    if second == "":
+        second = 0
     entry.delete(0, END)
-    entry.insert(0, f_num + int(second))
+    if key == "add":
+        entry.insert(0, f_num + float(second))
+    elif key == "minus":
+        entry.insert(0, f_num - float(second))
+    elif key == "multiply":
+        entry.insert(0, f_num * float(second))
+    elif key == "divide":
+        entry.insert(0, f_num / float(second))
 
 
 # Creating buttons
@@ -57,17 +103,17 @@ button_0 = Button(root, text="0", width=10, pady=20,
 button_plus = Button(root, text="+", width=10, pady=20,
                      command=button_add)
 button_minus = Button(root, text="-", width=10, pady=20,
-                      command=lambda: button_func())
+                      command=button_minus)
 button_multiply = Button(root, text="X", width=10,
-                         pady=20, command=lambda: button_func())
+                         pady=20, command=button_multiply)
 button_divide = Button(root, text="/", width=10, pady=20,
-                       command=lambda: button_func())
+                       command=button_divide)
 button_equal = Button(root, text="=", width=10, pady=52,
                       command=button_equal)
 button_comma = Button(root, text=".", width=10, pady=20,
-                      command=lambda: button_func())
+                      command=button_comma)
 button_changesign = Button(root, text="+/-", width=10,
-                           pady=20, command=lambda: button_func())
+                           pady=20, command=button_changesign)
 button_clear = Button(root, text="C", width=10, pady=20,
                       command=button_clear)
 
